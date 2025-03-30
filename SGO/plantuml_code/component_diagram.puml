@@ -1,0 +1,72 @@
+@startuml
+cloud "Internet" {
+    [API Externa] <<external>>
+}
+
+package "Interface de Usuario" {
+    [UI Principal] <<component>>
+    [UI Relatórios] <<component>>
+    
+    interface "InterfaceUsuario" as IU
+    [UI Principal] o-- IU : fornece
+    [UI Relatórios] o-- IU : fornece
+}
+
+package "Modulo Inscricoes" {
+    [Controlador Inscricao] <<component>>
+    [Servico Inscricao] <<component>>
+    
+    interface "InterfaceInscricao" as II
+    [Controlador Inscricao] o-- II : fornece
+    [Servico Inscricao] --> [Controlador Inscricao] : Processa Inscricao
+}
+
+package "Modulo Alocacao" {
+    [Controlador Alocacao] <<component>>
+    [Servico Alocacao] <<component>>
+    
+    interface "InterfaceAlocacao" as IA
+    [Controlador Alocacao] o-- IA : fornece
+    [Servico Alocacao] --> [Controlador Alocacao] : Gerencia Locais
+}
+
+package "Modulo Resultados" {
+    [Controlador Resultados] <<component>>
+    [Servico Resultados] <<component>>
+    
+    interface "InterfaceResultados" as IR
+    [Controlador Resultados] o-- IR : fornece
+    [Servico Resultados] --> [Controlador Resultados] : Processa Resultados
+}
+
+package "Modulo Relatorios" {
+    [Controlador Relatorios] <<component>>
+    [Servico Relatorios] <<component>>
+    [Banco de Dados] <<database>>
+    
+    interface "InterfaceRelatorios" as IRpt
+    [Controlador Relatorios] o-- IRpt : fornece
+    [Servico Relatorios] --> [Controlador Relatorios] : Gera Relatorios
+    [Controlador Relatorios] --> [Banco de Dados] : Consulta Dados
+}
+
+package "Infraestrutura" {
+    [Servidor] <<component>>
+    [Firewall] <<component>>
+    
+    [Firewall] --> [Servidor] : Protege
+}
+
+[UI Principal] --> [Controlador Inscricao] : Gerenciar Inscricoes
+[UI Principal] --> [Controlador Alocacao] : Definir Locais
+[UI Principal] --> [Controlador Resultados] : Registrar Resultados
+[UI Relatorios] --> [Controlador Relatorios] : Consultar Relatorios
+
+[Controlador Resultados] --> [API Externa] : Obter Dados Olimpicos
+
+[Servidor] --> [Controlador Inscricao] : Hospeda Sistema
+[Servidor] --> [Controlador Alocacao] : Hospeda Sistema
+[Servidor] --> [Controlador Resultados] : Hospeda Sistema
+[Servidor] --> [Controlador Relatorios] : Hospeda Sistema
+
+@enduml

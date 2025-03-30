@@ -1,0 +1,38 @@
+@startuml
+cloud "Internet" {
+    [Usuario Externo]
+    [API Externa] <<external>>
+}
+
+node "Infraestrutura SGO" {
+    node "Servidor de Aplicacao" {
+        [Aplicacao Web]
+    }
+    
+    node "Servidor de Banco de Dados" {
+        [Banco de Dados]
+    }
+    
+    node "Servidor de Relatorios" {
+        [Modulo de Relatorios]
+    }
+    
+    node "Servidor de Autenticacao" {
+        [Modulo de Autenticacao]
+    }
+}
+
+node "Dispositivos do Usuario" {
+    [Computador]
+    [Smartphone]
+}
+
+[Usuario Externo] --> [Aplicacao Web] : Acessa via HTTP
+[Aplicacao Web] --> [Banco de Dados] : Consulta e Atualiza Dados
+[Aplicacao Web] --> [Modulo de Relatorios] : Gera Relatorios
+[Aplicacao Web] --> [Modulo de Autenticacao] : Valida Login
+[Aplicacao Web] --> [API Externa] : Consumo de Dados Externos
+[Computador] --> [Aplicacao Web] : Acesso via Browser
+[Smartphone] --> [Aplicacao Web] : Acesso via Mobile
+
+@enduml

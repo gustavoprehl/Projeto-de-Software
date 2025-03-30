@@ -1,0 +1,19 @@
+@startuml
+actor Administrador
+actor Atleta
+actor SistemaRelatorios
+
+Administrador -> (Cadastrar Competicao)
+Administrador -> (Alocar Local)
+Administrador -> (Registrar Resultados)
+Atleta -> (Inscrever Atleta)
+SistemaRelatorios -> (Gerar Relatorio de Medalhas)
+
+(Cadastrar Competicao) ..> (Validar Dados) : <<include>>
+(Inscrever Atleta) ..> (Verificar Elegibilidade) : <<include>>
+(Registrar Resultados) ..> (Atualizar Medalhas) : <<include>>
+(Gerar Relatorio de Medalhas) ..> (Consultar Resultados) : <<include>>
+
+(Registrar Resultados) ..> (Notificar Comite Olimpico) : <<extend>>
+
+@enduml

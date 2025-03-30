@@ -1,0 +1,52 @@
+@startuml
+package "Modulo Competicao" {
+    class Competicao {
+        +nome: String
+        +data: Date
+        +horario: String
+        +local: Local
+        +atletas: List<Atleta>
+    }
+    class Local {
+        +nome: String
+        +endereco: String
+    }
+    Competicao --> Local : Ocorre em
+}
+
+package "Modulo Atletas" {
+    class Atleta {
+        +nome: String
+        +idade: int
+        +pais: Pais
+        +modalidade: String
+    }
+    class Pais {
+        +nome: String
+        +codigoISO: String
+    }
+    Atleta --> Pais : Representa
+}
+
+package "Modulo Resultados" {
+    class Resultado {
+        +competicao: Competicao
+        +vencedor: Atleta
+        +segundoLugar: Atleta
+        +terceiroLugar: Atleta
+    }
+    Resultado --> Competicao : Refere-se a
+    Resultado --> Atleta : Determina posições
+}
+
+package "Modulo Relatorios" {
+    class RelatorioMedalhas {
+        +pais: Pais
+        +ouro: int
+        +prata: int
+        +bronze: int
+    }
+    RelatorioMedalhas --> Pais : Consolida dados
+}
+
+@enduml

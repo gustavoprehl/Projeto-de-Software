@@ -1,0 +1,77 @@
+@startuml
+skinparam rectangle<<behavior>> {
+	roundCorner 25
+}
+sprite $bProcess jar:archimate/business-process
+sprite $aService jar:archimate/application-service
+sprite $aComponent jar:archimate/application-component
+
+' -----------------------------
+' Processos de Negócio
+' -----------------------------
+rectangle "Atendimento ao Paciente" as AP <<$bProcess>><<behavior>> #Business
+rectangle "Agendamento de Consultas" as AC <<$bProcess>><<behavior>> #Business
+rectangle "Cadastro de Paciente" as CP <<$bProcess>><<behavior>> #Business
+rectangle "Cadastro de Profissionais" as CM <<$bProcess>><<behavior>> #Business
+rectangle "Gerar Prontuário" as GP <<$bProcess>><<behavior>> #Business
+rectangle "Cobrança e Pagamento" as PG <<$bProcess>><<behavior>> #Business
+
+AP *-down- AC
+AP *-down- GP
+AP *-down- PG
+AP *-down- CP
+AP *-down- CM
+
+CP -right->> AC
+AC -right->> GP
+GP -right->> PG
+
+' -----------------------------
+' Serviços de Aplicação
+' -----------------------------
+rectangle "Serviço de Agendamento" as scheduleService <<$aService>><<behavior>> #Application
+rectangle "Serviço de Autenticação" as authService <<$aService>><<behavior>> #Application
+rectangle "Serviço de Cadastro" as registerService <<$aService>><<behavior>> #Application
+rectangle "Serviço de Prontuário" as recordService <<$aService>><<behavior>> #Application
+rectangle "Serviço de Pagamento" as paymentService <<$aService>><<behavior>> #Application
+
+scheduleService -up-> AC
+authService -up-> CP
+registerService -up-> CP
+registerService -up-> CM
+recordService -up-> GP
+paymentService -up-> PG
+
+' -----------------------------
+' Componentes de Aplicação
+' -----------------------------
+rectangle "Módulo Web\n(Painel Admin + Médico)" as WebModule <<$aComponent>> #Application
+rectangle "Módulo Mobile\n(Paciente)" as MobileModule <<$aComponent>> #Application
+rectangle "Sistema de Pagamento\n(Terceiro)" as PaymentGateway <<$aComponent>> #Application
+rectangle "Banco de Dados\nClínico" as Database <<$aComponent>> #Application
+rectangle "API REST\nSpring Boot" as BackendAPI <<$aComponent>> #Application
+
+WebModule .up.|> authService
+WebModule .up.|> registerService
+WebModule .up.|> scheduleService
+WebModule .up.|> recordService
+
+MobileModule .up.|> scheduleService
+MobileModule .up.|> authService
+
+BackendAPI .up.|> registerService
+BackendAPI .up.|> recordService
+BackendAPI .up.|> paymentService
+BackendAPI .up.|> scheduleService
+
+PaymentGateway .up.|> paymentService
+Database .up.|> BackendAPI
+
+legend left
+Modelo de arquitetura baseado no sistema DoctorWay.
+====
+<$bProcess> : processo de negócio  
+<$aService> : serviço de aplicação  
+<$aComponent> : componente de aplicação
+endlegend
+@enduml

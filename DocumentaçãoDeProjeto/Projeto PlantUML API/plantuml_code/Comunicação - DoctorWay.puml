@@ -1,0 +1,30 @@
+@startuml
+package "Usuários" {
+    object Paciente
+    object Atendente
+}
+
+package "Sistema DoctorWay" {
+    object InterfaceAgendamento
+    object ServicoAgendamento
+    object BancoDeDados
+}
+
+Paciente --> Atendente : Solicitar Agendamento
+Atendente --> InterfaceAgendamento : Inserir dados do paciente e da consulta
+InterfaceAgendamento --> ServicoAgendamento : Enviar dados para validação
+ServicoAgendamento --> BancoDeDados : Verificar disponibilidade
+BancoDeDados --> ServicoAgendamento : Disponibilidade confirmada
+ServicoAgendamento --> InterfaceAgendamento : Agendamento realizado
+InterfaceAgendamento --> Atendente : Agendamento confirmado
+Atendente --> Paciente : Confirmação entregue
+
+note left of Paciente
+  Paciente solicita o agendamento
+end note
+
+note right of BancoDeDados
+  BancoDeDados armazena os horários,
+  pacientes e médicos.
+end note
+@enduml

@@ -1,0 +1,38 @@
+@startuml
+actor Paciente
+participant "Tela Agendamento" as Tela
+participant "Sistema DoctorWay" as Sistema
+participant "Médico" as Medico
+
+Paciente -> Tela: Solicitar Agendamento
+Tela -> Sistema: Enviar dados da consulta
+activate Sistema
+note right of Sistema: Validando disponibilidade e dados
+Sistema --> Tela: Confirmação de agendamento
+deactivate Sistema
+Tela --> Paciente: Consulta agendada com sucesso
+
+opt Horário indisponível
+    Sistema -> Tela: Horário não disponível
+    Tela -> Paciente: Solicitar novo horário
+end
+
+alt Consulta urgente
+    Tela -> Medico: Verificar encaixe urgente
+    activate Medico
+    note right of Medico: Analisar disponibilidade
+    Medico --> Tela: Horário disponível
+    deactivate Medico
+end
+
+loop Reagendamento
+    Paciente -> Tela: Alterar data/hora
+    Tela -> Sistema: Atualizar agendamento
+    Sistema --> Tela: Agendamento atualizado
+    Tela --> Paciente: Novo horário confirmado
+end
+
+Paciente ->> Sistema: Enviar notificação por e-mail
+note left: Confirmação de agendamento enviada
+Sistema -->> Paciente: Email confirmado
+@enduml

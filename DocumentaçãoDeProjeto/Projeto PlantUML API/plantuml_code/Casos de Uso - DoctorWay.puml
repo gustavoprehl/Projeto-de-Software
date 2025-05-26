@@ -1,0 +1,38 @@
+@startuml
+actor Paciente
+actor Medico
+actor Atendente
+actor Administrador
+
+' Casos de uso do Paciente
+Paciente --> (UC-01 Agendar Consulta)
+Paciente --> (UC-02 Cancelar Consulta)
+Paciente --> (UC-03 Visualizar Histórico Médico)
+Paciente --> (UC-04 Visualizar Receitas)
+
+' Casos de uso do Médico
+Medico --> (UC-05 Acessar Agenda)
+Medico --> (UC-06 Registrar Prontuário)
+Medico --> (UC-07 Emitir Receita)
+Medico --> (UC-08 Visualizar Histórico do Paciente)
+
+' Casos de uso do Atendente
+Atendente --> (UC-09 Cadastrar Paciente)
+Atendente --> (UC-01 Agendar Consulta)
+Atendente --> (UC-02 Cancelar Consulta)
+Atendente --> (UC-10 Gerenciar Agenda Médica)
+Atendente --> (UC-11 Emitir Relatórios)
+
+' Casos de uso do Administrador
+Administrador --> (UC-12 Gerenciar Usuários)
+Administrador --> (UC-13 Configurar Sistema)
+Administrador --> (UC-14 Visualizar Relatórios Gerenciais)
+
+' Inclusões e extensões
+(UC-01 Agendar Consulta) --> (UC-15 Verificar Disponibilidade) : <<include>>
+(UC-06 Registrar Prontuário) --> (UC-16 Adicionar Diagnóstico) : <<include>>
+(UC-06 Registrar Prontuário) --> (UC-17 Adicionar Prescrição) : <<include>>
+
+(UC-07 Emitir Receita) ..> (UC-18 Enviar Receita por E-mail) : <<extend>>
+
+@enduml

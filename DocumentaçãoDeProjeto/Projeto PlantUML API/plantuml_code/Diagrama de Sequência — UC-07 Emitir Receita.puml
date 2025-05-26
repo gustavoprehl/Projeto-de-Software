@@ -1,0 +1,17 @@
+@startuml
+Medico -> Sistema: Preencher receita
+activate Sistema
+note right of Sistema: Valida medicamentos e dosagens
+Sistema --> Medico: Receita gerada
+deactivate Sistema
+
+alt Receita eletrônica
+    Medico -> Sistema: Enviar por e-mail
+    activate Sistema
+    Sistema --> Medico: Confirmação de envio
+    deactivate Sistema
+else Impressão física
+    Medico -> Impressora: Imprimir receita
+    note right: Receita gerada em papel
+end
+@enduml

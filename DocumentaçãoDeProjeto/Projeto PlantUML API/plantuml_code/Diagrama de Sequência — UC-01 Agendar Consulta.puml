@@ -1,0 +1,23 @@
+@startuml
+Paciente -> Atendente: Solicita agendamento
+activate Atendente
+Atendente -> Sistema: Verificar disponibilidade
+activate Sistema
+note right of Sistema: Consulta agenda do médico
+Sistema --> Atendente: Horários disponíveis
+deactivate Sistema
+
+Atendente -> Paciente: Informa horários disponíveis
+Paciente -> Atendente: Confirma horário
+Atendente -> Sistema: Registrar agendamento
+activate Sistema
+Sistema --> Atendente: Agendamento confirmado
+deactivate Sistema
+Atendente --> Paciente: Confirmação de consulta
+deactivate Atendente
+
+opt Enviar notificação
+    Sistema ->> Paciente: Notificação por e-mail/SMS
+    note right: Confirmação de agendamento
+end
+@enduml

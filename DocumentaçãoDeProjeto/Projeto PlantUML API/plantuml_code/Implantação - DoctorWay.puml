@@ -1,0 +1,47 @@
+@startuml
+cloud "Internet" {
+    [Usuário Paciente]
+    [Usuário Médico]
+    [API Pagamento Externo] <<external>>
+}
+
+node "Rede Interna - Clínica" {
+    node "Servidor Web 1" {
+        [DoctorWay Web App]
+    }
+    node "Servidor Web 2" {
+        [DoctorWay Web App - Réplica]
+    }
+
+    node "Servidor de Banco de Dados Primário" {
+        [Banco de Dados Clínico]
+    }
+    node "Servidor de Banco de Dados Secundário" {
+        [Réplica do Banco Clínico]
+    }
+
+    node "Servidor de Cache" {
+        [Redis Cache]
+    }
+}
+
+node "Dispositivos Locais" {
+    [Totem de Autoatendimento]
+    [Impressora de Receituário]
+}
+
+[Usuário Paciente] --> [DoctorWay Web App] : Requisições HTTP
+[Usuário Médico] --> [DoctorWay Web App] : Sessões de Consulta e Atualizações
+
+[DoctorWay Web App] --> [DoctorWay Web App - Réplica] : Balanceamento de carga
+[DoctorWay Web App] --> [Banco de Dados Clínico] : Consultas e Atualizações SQL
+[DoctorWay Web App] --> [Redis Cache] : Armazenar/Recuperar Sessões
+[DoctorWay Web App] --> [API Pagamento Externo] : Processar Pagamentos
+
+[DoctorWay Web App] --> [Totem de Autoatendimento] : Gerar Tokens de Atendimento
+[Totem de Autoatendimento] --> [DoctorWay Web App] : Dados de Check-in
+
+[DoctorWay Web App] --> [Impressora de Receituário] : Enviar Receitas
+
+[Banco de Dados Clínico] --> [Réplica do Banco Clínico] : Replicação de Dados
+@enduml

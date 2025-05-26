@@ -1,0 +1,32 @@
+@startuml
+[*] --> Início : Inicialização do Sistema
+
+Início --> TelaLogin : Acessar sistema
+TelaLogin : entry / Exibir campos de login
+TelaLogin : exit / Validar credenciais
+
+TelaLogin --> PainelPrincipal : Login bem-sucedido
+TelaLogin --> [*] : Login inválido
+
+PainelPrincipal : entry / Exibir menu principal
+PainelPrincipal --> AgendandoConsulta : Selecionar "Agendar Consulta"
+PainelPrincipal --> Sair : Logout
+
+state AgendandoConsulta {
+    [*] --> SelecionarPaciente : Buscar paciente
+    SelecionarPaciente : entry / Exibir lista de pacientes
+    SelecionarPaciente --> SelecionarMedico : Paciente escolhido
+
+    SelecionarMedico : entry / Exibir lista de médicos
+    SelecionarMedico --> SelecionarHorario : Médico escolhido
+
+    SelecionarHorario : entry / Exibir horários disponíveis
+    SelecionarHorario --> ConfirmarAgendamento : Horário selecionado
+
+    ConfirmarAgendamento : entry / Confirmar dados
+    ConfirmarAgendamento --> PainelPrincipal : Consulta Agendada
+    ConfirmarAgendamento --> SelecionarHorario : Voltar e alterar horário
+}
+
+Sair --> [*] : Encerrar sistema
+@enduml

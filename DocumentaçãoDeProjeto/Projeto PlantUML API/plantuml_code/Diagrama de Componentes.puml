@@ -1,0 +1,53 @@
+@startuml
+cloud "Internet" {
+    [API Pagamento Externo] <<external>>
+}
+
+package "Módulo Paciente" {
+    [ControladorPaciente] <<component>>
+    [UI Paciente] <<component>>
+
+    interface "InterfacePaciente" as I_Paciente
+    [ControladorPaciente] o-- I_Paciente : fornece
+    [UI Paciente] --> [ControladorPaciente] : Interação do Usuário
+
+    interface "InterfaceAgendamento" as I_Agendamento
+    [ControladorPaciente] ..> I_Agendamento : requer
+}
+
+package "Módulo Agendamento" {
+    [ControladorAgendamento] <<component>>
+    [ServicoAgendamento] <<component>>
+
+    interface "InterfaceAgendamento" as I_Agendamento
+    [ControladorAgendamento] o-- I_Agendamento : fornece
+
+    interface "InterfaceSistema" as I_Sistema
+    [ControladorAgendamento] ..> I_Sistema : requer
+
+    [ServicoAgendamento] --> [ControladorAgendamento] : Regras de Negócio
+}
+
+package "Módulo Sistema Clínico" {
+    [ControladorSistema] <<component>>
+    [Banco de Dados Clínico] <<database>>
+
+    interface "InterfaceSistema" as I_Sistema
+    [ControladorSistema] o-- I_Sistema : fornece
+    [ControladorSistema] --> [Banco de Dados Clínico] : Acesso/Atualização de Dados
+}
+
+package "Infraestrutura de Rede" {
+    [Gateway] <<component>>
+    [Balanceador de Carga] <<component>>
+    [Firewall] <<component>>
+
+    [Gateway] --> [Balanceador de Carga] : Direcionar Tráfego
+    [Balanceador de Carga] --> [ControladorSistema] : Distribuir Requisições
+    [Firewall] --> [Gateway] : Filtrar Tráfego
+}
+
+[ControladorPaciente] --> [Gateway] : Solicitações HTTP
+[ControladorSistema] --> [API Pagamento Externo] : Enviar/Receber Dados
+
+@enduml

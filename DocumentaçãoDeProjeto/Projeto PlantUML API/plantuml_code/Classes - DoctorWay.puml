@@ -1,0 +1,64 @@
+@startuml
+' Estilo opcional para clareza
+skinparam classAttributeIconSize 0
+
+abstract class Pessoa {
+    +id: int
+    +nome: string
+    +email: string
+    +telefone: string
+    +getInformacoes(): string
+}
+
+class Paciente {
+    +dataNascimento: Date
+    +cpf: string
+    +endereco: string
+    +historicoMedico: string
+    +agendarConsulta(Consulta): void
+}
+
+class Medico {
+    +crm: string
+    +especialidade: Especialidade
+    +realizarConsulta(Consulta): void
+    +emitirReceita(Receita): Receita
+}
+
+Pessoa <|-- Paciente
+Pessoa <|-- Medico
+
+class Especialidade {
+    +id: int
+    +nome: string
+}
+
+class Consulta {
+    +id: int
+    +dataHora: Date
+    +status: string
+    +anotacoes: string
+    +registrarProntuario(): void
+}
+
+class Receita {
+    +id: int
+    +descricao: string
+    +dataEmissao: Date
+    +medicamentos: List<string>
+}
+
+class Prontuario {
+    +id: int
+    +dataCriacao: Date
+    +observacoes: string
+    +diagnostico: string
+    +tratamento: string
+}
+
+Paciente --> Consulta : "1..*"
+Medico --> Consulta : "1..*"
+Consulta --> Receita : "0..1"
+Consulta --> Prontuario : "0..1"
+Medico --> Especialidade : "1"
+@enduml

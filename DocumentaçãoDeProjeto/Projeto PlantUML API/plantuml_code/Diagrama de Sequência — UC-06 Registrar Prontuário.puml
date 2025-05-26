@@ -1,0 +1,24 @@
+@startuml
+Medico -> Sistema: Acessar prontuário do paciente
+activate Sistema
+note right of Sistema: Carrega dados clínicos existentes
+Sistema --> Medico: Exibe prontuário
+deactivate Sistema
+
+Medico -> Sistema: Adicionar diagnóstico
+activate Sistema
+Sistema --> Medico: Diagnóstico registrado
+deactivate Sistema
+
+Medico -> Sistema: Adicionar prescrição
+activate Sistema
+Sistema --> Medico: Prescrição registrada
+deactivate Sistema
+
+opt Finalizar atendimento
+    Medico -> Sistema: Encerrar registro
+    activate Sistema
+    Sistema --> Medico: Registro salvo
+    deactivate Sistema
+end
+@enduml

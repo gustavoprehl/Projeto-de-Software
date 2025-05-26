@@ -1,0 +1,35 @@
+@startchen
+
+entity Paciente {
+}
+entity Medico {
+}
+entity Consulta {
+}
+entity Especialidade {
+}
+entity Sala {
+}
+
+relationship Realiza {
+}
+relationship Atende {
+}
+relationship Possui {
+}
+relationship OcorreEm {
+}
+
+Paciente -N- Realiza
+Realiza -1- Consulta
+
+Medico -N- Atende
+Atende -1- Consulta
+
+Medico -N- Possui
+Possui -1- Especialidade
+
+Consulta -1- OcorreEm
+OcorreEm -1- Sala
+
+@endchen

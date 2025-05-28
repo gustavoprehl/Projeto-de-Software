@@ -33,10 +33,10 @@ Todos os diagramas foram modelados utilizando a ferramenta **PlantUML**. Abaixo 
 
 ### 3. Diagrama de Classes
  ![Classes](./Projeto%20PlantUML%20API/plantuml_diagrams/Classes%20-%20DoctorWay.png)
- [Arquivo `.puml`](./Projeto%20PlantUML%20API/plantuml_code/Classes%20-%20DoctorWay.puml)
+ [Classes `.puml`](./Projeto%20PlantUML%20API/plantuml_code/Classes%20-%20DoctorWay.puml)
 
 ### 4. Comunicação
- ![Comunicação](./Projeto%20PlantUML%20API/plantuml_diagrams/Comunicação%20-%20DoctorWay.png)
+![Comunicação](./Projeto%20PlantUML%20API/plantuml_diagrams/Comunicação%20-%20DoctorWay.png)
 [Arquivo `.puml`](./Projeto%20PlantUML%20API/plantuml_code/Comunicação%20-%20DoctorWay.puml)
 
 ### 5. Diagrama de Componentes

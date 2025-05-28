@@ -37,7 +37,7 @@ Todos os diagramas foram modelados utilizando a ferramenta **PlantUML**. Abaixo 
 
 ### 4. Comunicação
 ![Comunicação](./Projeto%20PlantUML%20API/plantuml_diagrams/Comunicação%20-%20DoctorWay.png)
-[Arquivo `.puml`](./Projeto%20PlantUML%20API/plantuml_code/Comunicação%20-%20DoctorWay.puml)
+[Comunicação `.puml`](./Projeto%20PlantUML%20API/plantuml_code/Comunicação%20-%20DoctorWay.puml)
 
 ### 5. Diagrama de Componentes
  ![Componentes](./Projeto%20PlantUML%20API/plantuml_diagrams/Diagrama%20de%20Componentes%20%20DoctorWay.png)

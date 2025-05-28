@@ -3,8 +3,7 @@
 ## 👥 Integrantes do Grupo
 
 - Gustavo Prehl
-
-*(Caso o projeto tenha mais integrantes, adicione-os aqui)*
+- Guilherme Silveira
 
 ## 🩺 Sobre o Sistema
 

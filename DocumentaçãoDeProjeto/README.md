@@ -28,8 +28,8 @@ Todos os diagramas foram modelados utilizando a ferramenta **PlantUML**. Abaixo 
  [Arquitetura `.puml`](./Projeto%20PlantUML%20API/plantuml_code/Arquitetura%20-%20DoctorWay.puml)
 
 ### 2. Casos de Uso
-- ![Casos de Uso](./Projeto%20PlantUML%20API/plantuml_diagrams/Casos%20de%20uso%20-%20DoctorWay.png)
-- [Arquivo `.puml`](./Projeto%20PlantUML%20API/plantuml_code/Casos%20de%20Uso%20-%20DoctorWay.puml)
+ ![Casos de Uso](./Projeto%20PlantUML%20API/plantuml_diagrams/Casos%20de%20uso%20-%20DoctorWay.png)
+ [Casos de Uso `.puml`](./Projeto%20PlantUML%20API/plantuml_code/Casos%20de%20Uso%20-%20DoctorWay.puml)
 
 ### 3. Diagrama de Classes
 - ![Classes](./Projeto%20PlantUML%20API/plantuml_diagrams/Classes%20-%20DoctorWay.png)

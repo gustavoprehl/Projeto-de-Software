@@ -50,17 +50,3 @@ Todos os diagramas foram modelados utilizando a ferramenta **PlantUML**. Abaixo 
 ### 7. Diagrama de Estados
  ![Estados](./Projeto%20PlantUML%20API/plantuml_diagrams/Estados.png)
  [Arquivo `.puml`](./Projeto%20PlantUML%20API/plantuml_code/Estados%20-%20DoctorWay.puml)
-
-### 8. Diagrama de Sequência (UC-01)
-- ![Sequência 1](./Projeto%20PlantUML%20API/plantuml_diagrams/Diagrama%20de%20Sequência%20—%20UC-01.png)
-- [Arquivo `.puml`](./Projeto%20PlantUML%20API/plantuml_code/Diagrama%20de%20Sequência%20—%20UC-01.puml)
-
-### 9. Diagrama de Sequência (UC-06)
-- ![Sequência 2](./Projeto%20PlantUML%20API/plantuml_diagrams/Diagrama%20de%20Sequência%20—%20UC-06.png)
-- [Arquivo `.puml`](./Projeto%20PlantUML%20API/plantuml_code/Diagrama%20de%20Sequência%20—%20UC-06.puml)
-
-### 10. Diagrama de Sequência (UC-07)
-- ![Sequência 3](./Projeto%20PlantUML%20API/plantuml_diagrams/Diagrama%20de%20Sequência%20—%20UC-07.png)
-- [Arquivo `.puml`](./Projeto%20PlantUML%20API/plantuml_code/Diagrama%20de%20Sequência%20—%20UC-07.puml)
-
-

@@ -24,8 +24,8 @@ A arquitetura do sistema segue uma abordagem modular e em camadas, com clientes 
 Todos os diagramas foram modelados utilizando a ferramenta **PlantUML**. Abaixo estão os links para as imagens (.png) e seus respectivos arquivos-fonte (.puml).
 
 ### 1. Arquitetura
-- ![Arquitetura](./Projeto%20PlantUML%20API/plantuml_diagrams/Arquitetura%20-%20DoctorWay.png)
-- [Arquivo `.puml`](./Projeto%20PlantUML%20API/plantuml_code/Arquitetura%20-%20DoctorWay.puml)
+ ![Arquitetura](./Projeto%20PlantUML%20API/plantuml_diagrams/Arquitetura%20-%20DoctorWay.png)
+ [Arquitetura `.puml`](./Projeto%20PlantUML%20API/plantuml_code/Arquitetura%20-%20DoctorWay.puml)
 
 ### 2. Casos de Uso
 - ![Casos de Uso](./Projeto%20PlantUML%20API/plantuml_diagrams/Casos%20de%20uso%20-%20DoctorWay.png)

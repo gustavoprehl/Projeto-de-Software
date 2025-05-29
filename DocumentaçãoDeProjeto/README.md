@@ -28,14 +28,16 @@ Todos os diagramas foram modelados utilizando a ferramenta **PlantUML**. Abaixo 
 [ Casos de Uso.puml](./Projeto%20PlantUML%20API/plantuml_code/Casos%20de%20Uso%20-%20DoctorWay.puml)
 
 ### Diagrama de Sequência do Sistema
-![Diagrama de Sequência — UC-01](./Projeto%20PlantUML%20API/plantuml_diagrams/Diagrama%20de%20Sequência%20—%20UC-01.png)  
-[Diagrama de Sequência — UC-01.puml](./Projeto%20PlantUML%20API/plantuml_code/Diagrama%20de%20Sequência%20—%20UC-01.puml)
 
-![Diagrama de Sequência — UC-06](./Projeto%20PlantUML%20API/plantuml_diagrams/Diagrama%20de%20Sequência%20—%20UC-06.png)  
-[Diagrama de Sequência — UC-06.puml](./Projeto%20PlantUML%20API/plantuml_code/Diagrama%20de%20Sequência%20—%20UC-06.puml)
+![Diagrama de Sequência — UC-01 Agendar Consulta](./Projeto%20PlantUML%20API/plantuml_diagrams/Diagrama%20de%20Sequência%20—%20UC-01%20Agendar%20Consulta.png)  
+[arquivo - Diagrama de Sequência — UC-01.puml](./Projeto%20PlantUML%20API/plantuml_code/Diagrama%20de%20Sequência%20—%20UC-01.puml)
 
-![Diagrama de Sequência — UC-07](./Projeto%20PlantUML%20API/plantuml_diagrams/Diagrama%20de%20Sequência%20—%20UC-07.png)  
-[Diagrama de Sequência — UC-07.puml](./Projeto%20PlantUML%20API/plantuml_code/Diagrama%20de%20Sequência%20—%20UC-07.puml)
+![Diagrama de Sequência — UC-06 Registrar Prontuário](./Projeto%20PlantUML%20API/plantuml_diagrams/Diagrama%20de%20Sequência%20—%20UC-06%20Registrar%20Prontuário.png)  
+[arquivo - Diagrama de Sequência — UC-06.puml](./Projeto%20PlantUML%20API/plantuml_code/Diagrama%20de%20Sequência%20—%20UC-06.puml)
+
+![Diagrama de Sequência — UC-07 Emitir Receita](./Projeto%20PlantUML%20API/plantuml_diagrams/Diagrama%20de%20Sequência%20—%20UC-07%20Emitir%20Receita.png)  
+[arquivo - Diagrama de Sequência — UC-07.puml](./Projeto%20PlantUML%20API/plantuml_code/Diagrama%20de%20Sequência%20—%20UC-07.puml)
+
 
 ### Arquitetura
 ![Arquitetura](./Projeto%20PlantUML%20API/plantuml_diagrams/Arquitetura%20-%20DoctorWay.png)  

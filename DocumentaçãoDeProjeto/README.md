@@ -21,33 +21,47 @@ A arquitetura do sistema segue uma abordagem modular e em camadas, com clientes 
 
 ## 📊 Diagramas do Sistema
 
-Todos os diagramas foram modelados utilizando a ferramenta **PlantUML**. Abaixo estão os links para as imagens (.png) e seus respectivos arquivos-fonte (.puml).
+Todos os diagramas foram modelados utilizando a ferramenta **PlantUML**. Abaixo estão os diagramas ilustrativos (.png) e os arquivos de projeto (.puml).
 
-### 1. Arquitetura
- ![Arquitetura](./Projeto%20PlantUML%20API/plantuml_diagrams/Arquitetura%20-%20DoctorWay.png)
-- [Arquitetura `.puml`](./Projeto%20PlantUML%20API/plantuml_code/Arquitetura%20-%20DoctorWay.puml)
+### Modelo de Casos de Uso
+![Modelo de Casos de Uso](./Projeto%20PlantUML%20API/plantuml_diagrams/Casos%20de%20uso%20-%20DoctorWay.png)  
+[arquivo - Casos de Uso.puml](./Projeto%20PlantUML%20API/plantuml_code/Casos%20de%20Uso%20-%20DoctorWay.puml)
 
-### 2. Casos de Uso
- ![Casos de Uso](./Projeto%20PlantUML%20API/plantuml_diagrams/Casos%20de%20uso%20-%20DoctorWay.png)
-- [Casos de Uso`.puml`](./Projeto%20PlantUML%20API/plantuml_code/Casos%20de%20Uso%20-%20DoctorWay.puml)
+### Diagrama de Sequência do Sistema
+![Diagrama de Sequência — UC-01](./Projeto%20PlantUML%20API/plantuml_diagrams/Diagrama%20de%20Sequência%20—%20UC-01.png)  
+[arquivo - Diagrama de Sequência — UC-01.puml](./Projeto%20PlantUML%20API/plantuml_code/Diagrama%20de%20Sequência%20—%20UC-01.puml)
 
-### 3. Diagrama de Classes
- ![Classes](./Projeto%20PlantUML%20API/plantuml_diagrams/Classes%20-%20DoctorWay.png)
-- [Classes `.puml`](./Projeto%20PlantUML%20API/plantuml_code/Classes%20-%20DoctorWay.puml)
+![Diagrama de Sequência — UC-06](./Projeto%20PlantUML%20API/plantuml_diagrams/Diagrama%20de%20Sequência%20—%20UC-06.png)  
+[arquivo - Diagrama de Sequência — UC-06.puml](./Projeto%20PlantUML%20API/plantuml_code/Diagrama%20de%20Sequência%20—%20UC-06.puml)
 
-### 4. Comunicação
- ![Comunicação](./Projeto%20PlantUML%20API/plantuml_diagrams/Comunicação%20-%20DoctorWay.png)
-- [Comunicação `.puml`](./Projeto%20PlantUML%20API/plantuml_code/Comunicação%20-%20DoctorWay.puml)
+![Diagrama de Sequência — UC-07](./Projeto%20PlantUML%20API/plantuml_diagrams/Diagrama%20de%20Sequência%20—%20UC-07.png)  
+[arquivo - Diagrama de Sequência — UC-07.puml](./Projeto%20PlantUML%20API/plantuml_code/Diagrama%20de%20Sequência%20—%20UC-07.puml)
 
-### 5. Diagrama de Componentes
- ![Componentes](./Projeto%20PlantUML%20API/plantuml_diagrams/Diagrama%20de%20Componentes%20-%20DoctorWay.png)
-- [Componentes `.puml`](./Projeto%20PlantUML%20API/plantuml_code/Diagrama%20de%20Componentes.puml)
+### Arquitetura
+![Arquitetura](./Projeto%20PlantUML%20API/plantuml_diagrams/Arquitetura%20-%20DoctorWay.png)  
+[arquivo - Arquitetura.puml](./Projeto%20PlantUML%20API/plantuml_code/Arquitetura%20-%20DoctorWay.puml)
 
-### 6. Diagrama de Implantação
- ![Implantação](./Projeto%20PlantUML%20API/plantuml_diagrams/Implantação%20-%20DoctorWay.png)
-- [Implantação `.puml`](./Projeto%20PlantUML%20API/plantuml_code/Implantação%20-%20DoctorWay.puml)
+### Diagrama de Componentes
+![Diagrama de Componentes](./Projeto%20PlantUML%20API/plantuml_diagrams/Diagrama%20de%20Componentes%20-%20DoctorWay.png)  
+[arquivo - Diagrama de Componentes.puml](./Projeto%20PlantUML%20API/plantuml_code/Diagrama%20de%20Componentes.puml)
 
-### 7. Diagrama de Estados
- ![Estados](./Projeto%20PlantUML%20API/plantuml_diagrams/Estados.png)
-- [Estados `.puml`](./Projeto%20PlantUML%20API/plantuml_code/Estados%20-%20DoctorWay.puml)
+### Implantação
+![Implantação](./Projeto%20PlantUML%20API/plantuml_diagrams/Implantação%20-%20DoctorWay.png)  
+[arquivo - Implantação.puml](./Projeto%20PlantUML%20API/plantuml_code/Implantação%20-%20DoctorWay.puml)
+
+### Classes
+![Classes](./Projeto%20PlantUML%20API/plantuml_diagrams/Classes%20-%20DoctorWay.png)  
+[arquivo - Classes.puml](./Projeto%20PlantUML%20API/plantuml_code/Classes%20-%20DoctorWay.puml)
+
+### Comunicação
+![Comunicação](./Projeto%20PlantUML%20API/plantuml_diagrams/Comunicação%20-%20DoctorWay.png)  
+[arquivo - Comunicação.puml](./Projeto%20PlantUML%20API/plantuml_code/Comunicação%20-%20DoctorWay.puml)
+
+### Estados
+![Estados](./Projeto%20PlantUML%20API/plantuml_diagrams/Estados.png)  
+[arquivo - Estados.puml](./Projeto%20PlantUML%20API/plantuml_code/Estados%20-%20DoctorWay.puml)
+
+### Modelo de Dados
+![Modelo de Dados](./Projeto%20PlantUML%20API/plantuml_diagrams/Modelo%20de%20Dados%20-%20DoctorWay.png)  
+[arquivo - Modelo de Dados.puml](./Projeto%20PlantUML%20API/plantuml_code/Modelo%20de%20Dados%20-%20DoctorWay.puml)
 

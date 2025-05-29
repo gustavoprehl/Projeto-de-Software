@@ -94,7 +94,7 @@ Todos os diagramas foram modelados utilizando a ferramenta **PlantUML**. Abaixo 
 ---
 
 ### Modelo de Dados
-![Modelo de Dados](./Projeto%20PlantUML%20API/plantuml_diagrams/Modelo%20de%20Dados%20-%20DoctorWay.png)  
-[Modelo de Dados.puml](./Projeto%20PlantUML%20API/plantuml_code/Modelo%20de%20Dados%20-%20DoctorWay.puml)  
-**Descrição:** Define as principais entidades do sistema DoctorWay e seus relacionamentos. Esse modelo serve como base para a futura implementação do banco de dados relacional ou NoSQL.
+![Modelo de Dados](./Projeto%20PlantUML%20API/plantuml_diagrams/Modelo%20de%20Dados.png)  
+**Descrição:** Este modelo relacional representa a estrutura de dados do sistema DoctorWay. A entidade `Pessoa` centraliza os dados comuns entre `Paciente` e `Médico`, promovendo reutilização por herança relacional. `Consulta` relaciona pacientes e médicos, podendo opcionalmente gerar um `Prontuário` e uma `Receita`. A entidade `Especialidade` define as áreas médicas associadas aos profissionais de saúde.
+
 

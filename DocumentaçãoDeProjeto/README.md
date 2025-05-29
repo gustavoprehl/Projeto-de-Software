@@ -29,12 +29,15 @@ Todos os diagramas foram modelados utilizando a ferramenta **PlantUML**. Abaixo 
 
 ### Diagrama de Sequência do Sistema
 
+#### UC-01 — Agendar Consulta
 ![Diagrama de Sequência — UC-01 Agendar Consulta](./Projeto%20PlantUML%20API/plantuml_diagrams/Diagrama%20de%20Sequência%20—%20UC-01%20Agendar%20Consulta.png)  
 [arquivo - Diagrama de Sequência — UC-01.puml](./Projeto%20PlantUML%20API/plantuml_code/Diagrama%20de%20Sequência%20—%20UC-01.puml)
 
+#### UC-06 — Registrar Prontuário
 ![Diagrama de Sequência — UC-06 Registrar Prontuário](./Projeto%20PlantUML%20API/plantuml_diagrams/Diagrama%20de%20Sequência%20—%20UC-06%20Registrar%20Prontuário.png)  
 [arquivo - Diagrama de Sequência — UC-06.puml](./Projeto%20PlantUML%20API/plantuml_code/Diagrama%20de%20Sequência%20—%20UC-06.puml)
 
+#### UC-07 — Emitir Receita
 ![Diagrama de Sequência — UC-07 Emitir Receita](./Projeto%20PlantUML%20API/plantuml_diagrams/Diagrama%20de%20Sequência%20—%20UC-07%20Emitir%20Receita.png)  
 [arquivo - Diagrama de Sequência — UC-07.puml](./Projeto%20PlantUML%20API/plantuml_code/Diagrama%20de%20Sequência%20—%20UC-07.puml)
 
